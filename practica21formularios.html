@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formularios</title>
+	<style type="">
+		h1{
+			text-align: center;
+			color: white;
+		}
+
+		h2{
+			text-align: center;
+			color: white;
+		}
+		form{
+			
+			padding: 15px;
+		}
+		fieldset{
+			text-align: center;
+			padding: 30px;
+		}
+		legend{
+			color: white;
+		}
+		label{
+			padding: 20px;
+			color: white;
+		}
+		body{
+			background-image: url("https://static01.nyt.com/images/2021/10/08/arts/08playlist/08playlist-superJumbo.jpg");
+			background size: cover;
+			background-attachment: fixed;
+			background-position: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+	<h1>Mitski </h1>
+	<h2>Online store</h2>
+	<form action="" method="post" enctype="text/plain">
+		<fieldset>		
+		<legend>Información personal del cliente</legend>
+		<label for="nombre">Nombre: </label>
+		<input type="text" name="usuario" id="usuario" placeholder="Nombre" >
+
+		<label for="apa">Apellido paterno: </label>
+		<input type="text" name="apa" id="apa" placeholder="Apellido paterno">
+
+		<label for="apm">Apellido materno: </label>
+		<input type="text" name="apm" id="apm" placeholder="Apellido materno">
+		<br/>
+
+		<label for="usuario">Nombre de usuario: </label>
+		<input type="user" name="usuario" id="usuario" placeholder="Usuario">
+
+		<label for="pass">Contraseña</label>
+		<input type="password" name="pass" id="pass" placeholder="Contraseña">
+
+		<label for="fecha">Fecha de registro: </label>
+		<input type="date" name="fecha" id="fecha">
+	</fieldset>
+
+	</form>
+
+
+	<form action="" method="post" enctype="text/plain"> 
+		<fieldset>
+			<legend>Datos para facturar</legend>
+			<label for="pais">País: </label>
+			<select name="Pais" id="pais" size="3">
+
+				<option>México</option>
+				<option>USA</option>
+				<option>Canada</option>
+				<option>Australia</option>
+				<option>Colombia</option>
+				<option>Japón</option>
+			</select>
+
+			<label for="ciudad">Ciudad: </label>
+			<select name="Ciudad" id="Ciudad" size="3">
+
+				<option>San Luis Potosí</option>
+				<option>Ciudad de México</option>
+				<option>Bloxburg</option>
+				<option>New York</option>
+				<option>Toronto</option>
+				<option>Melbourne</option>
+				<option>Sydney</option>
+				<option>Cartagena</option>
+				<option>Tokyo</option>
+				<br/>
+				</select>
+
+			<label for="calle">Calle: </label>
+			<input type="text" name="calle" id="calle" placeholder="calle">
+			<br/>
+
+			<label for="casa">Número de casa: </label>
+			<input type="text" name="casa" id="casa" placeholder="Número exterior">
+
+			<label for="colonia">Colonia: </label>
+			<input type="text" name="colonia" id="colonia" placeholder="colonia">
+
+			<label for="email">E-mail: </label>
+			<input type="email" name="email" id="email" placeholder="E-mail">
+			<br/>
+
+			<label for="rfc">R.F.C: </label>
+			<input type="text" name="rfc" id="rfc" placeholder="R.F.C">
+
+			<label for="cp">Código Postal: </label>
+			<input type="text" name="cp" id="cp" placeholder="Código Postal">
+
+			<input style="padding: 0px;" type="checkbox" name="terminos" id="terminos">
+			<label for="terminos">Acepto los términos y condiciones</label>
+
+			<input type="submit" name="enviar" id="enviar" value="Enviar datos">
+			<input type="reset" name="reset" id="reset" value="Restablecer">
+
+		</fieldset>
+		
+	</form>
+</div>
+	<h2 style="text-align: right;">Febrero 2025, SLP<h2>
+
+</body>
+</html>
