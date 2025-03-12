@@ -1,0 +1,41 @@
+.capa1{
+	margin-left: 25%;
+	padding: 12px;
+}
+
+ul{
+	list-style-type: none;
+	width:22%;
+	margin: 0px;
+	padding: 0px;
+	height: 80%;
+	background-color: #98D2C0;
+	position: fixed;
+}
+
+li a{
+	background-color: #4F959D;
+	color: white;
+	display:block;
+	padding: 16px;
+	text-decoration: none;
+}
+
+li a:hover{
+	background-color: #205781;
+}
+li .activo{
+	background-color: #003092;
+	color: white;
+}
+h1{
+  font-family: "Henny Penny", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2{
+font-family: "Oldenburg", serif;
+  font-weight: 400;
+  font-style: normal;
+}
