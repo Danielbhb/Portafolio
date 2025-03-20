@@ -1,0 +1,231 @@
+h1{
+	background-color: #F2E2B1 ;
+	background-color: width 40px;
+}
+
+#headerimg{
+	align-content: center;
+}
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#search{
+	background-image: url(images/icono1.png) ;
+	background-position: right center;
+	background-repeat: no-repeat;
+	padding: 9px;
+	padding-right: 30px;
+}
+
+#list1 {
+	list-style-type: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #CCD6A6;
+	border: 5px;
+	border-radius: 25px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	height: 45px;
+}
+
+#list1 li{
+	flex: 1;
+	text-align: center;
+	padding: 4px;
+}
+
+#list1 li a{
+	flex: 1;
+	background-color: transparent;
+	padding: 8px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	color: black;
+	font-size: 23px;
+}
+
+#list1 li:hover{
+	background-color: #AAB99A;
+	border: 5px;
+	border-radius: 25px;
+	border-width: 1px;
+	border-style: solid;
+	
+}
+
+.sidebar{
+	position: relative;
+	top: 25px;
+	background-color: #DAE2B6;
+	list-style-type: none;
+	margin-bottom: 24px;
+	width: 17%;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+ul{
+	list-style-type: none;
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #DAE2B6;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	height: 100%;
+}
+
+/*.sidebar li{
+	text-align: center;
+	list-style-type: none;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	width: 100%;
+}*/
+
+.sidebar li a{
+	text-align: center;
+	text-decoration: none;
+	list-style-type: none;
+	display: block;
+	padding: 10px;
+	color: black;
+
+}
+
+.sidebar li a:hover{
+	text-align: center;
+	background-color: #727D73;
+	color: white;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	width: 90%;
+}
+
+#title{
+	font-size: 22px;
+}
+
+.container{
+	display: grid;
+	display: flex;
+	justify-content: space-between;
+}
+
+.types{
+	position: relative;
+	top: 25px;
+	background-color: #DAE2B6;
+	list-style-type: none;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	justify-content: space-between;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	border-radius: 10px;
+	height: 547px;
+}
+
+.types li{
+	text-align: center;
+	list-style-type: none;
+}
+
+.types li a{
+	
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	padding: 20px;
+	color: black;
+	margin: 0px;
+}
+
+.types li a:hover{
+	background-color: #727D73;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	border-radius: 10px; 
+	color: white;
+}
+
+.mainimgGH{
+	position: relative;
+	top: 25px;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	}
+
+.bottom{
+	position: relative;
+	display: flex;
+
+}
+
+.par{
+	background-color: #F7EDDB;
+	width: 810px;
+	border-width: 1px;
+	border-style: solid;
+	margin-top: 50px;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	padding: 5px;
+}
+
+.cont{
+	background-color: #DFE8CC;
+	width: 95%;
+	border-width: 1px;
+	border-style: solid;
+	margin-top: 50px;
+	border-radius: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #727D73;
+	padding: 5px;
+}
+
+.right{
+	width: 15%;
+	
+}
+ul{
+	margin-left:0px;
+}
+li a{
+	margin-left:0px;
+}
+
+#Email, #phone{
+	color: blue;
+}
+
+<! https://colorhunt.co/palette/ccd6a6dae2b6dfe8ccf7eddb -->
