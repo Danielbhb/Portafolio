@@ -1,0 +1,54 @@
+.container{
+	position: relative;
+	background: #D5C7A3;
+	height: 100px;
+}
+
+.box1{
+	position: relative;
+	background: #F2E2B1;
+	height: 100px;
+	text-align: center;
+}
+
+.box2{
+	position: absolute;
+	background: #504B38;
+	height: 100px;
+	width: 100px;
+	left: 120px;
+	top: 40px;
+	z-index: 1;
+	text-align: center;
+}
+
+.box3{
+	position: absolute;
+	background: #A7B49E;
+	width: 200px;
+	height: 200px;
+	right: 100px;
+	top: 85px;
+	text-align: center;
+}
+
+.box4{
+	position: absolute;
+	background: #5C7285;
+	left: 300px;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	top: 50px;
+}
+
+.box5{
+	position: fixed; /*permanece fijo*/
+	background: #C8AAAA;
+	right: 0px;
+	bottom: 0px;
+	text-align: center;
+	z-index: 4;
+	width: 200px;
+	height: 70px;
+}
