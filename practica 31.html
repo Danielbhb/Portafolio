@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operaciones con Javascript</title>
+	<script type="text/javascript" src="codigo 31.js"></script>
+	<style type="">
+
+		body {
+            text-align: center; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ECEFCA;
+        }
+
+		#form{
+			background-color: #94B4C1; 
+			text-align: center; 
+			padding: 10px;
+			border: 3px solid #213448;
+			border-radius: 10px;
+		}
+
+		h1{
+			text-align: center;
+			color: #213448;
+		}
+
+		h2{
+			text-align: center;
+			color: #213448;
+		}
+
+		#operationalButtons{
+			padding: 10px;
+		}
+
+		#resultado{
+			margin: 20px auto; 
+            padding: 15px;
+			max-width: 200px;
+			max-height: 50px;
+			background-color: #213448;
+			color: white;
+			border: 3px solid #94B4C1;
+			border-radius: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>Operaciones</h1>
+	<form id="form" style=" " >
+		<label for="num1">Escribe tu primer número: </label>
+		<input type="text" name="num1" id="num1" placeholder="Escribe un número"> <br/>
+		<label for="num2">Escribe tu segundo número: </label>
+		<input type="text" name="num2" id="num2" placeholder="Escribe un número"> <br/>
+
+		<div id="operationalButtons">
+			<input type="button" name="suma" id="suma" value="suma" onclick="sumar()" 
+			style="background-color: #547792;">
+			<input type="button" name="resta" id="resta" value="resta" onclick="restar()" 
+			style = "background-color: #547792;">
+			<input type="button" name="multiplicacion" id="multiplicacion" value="multiplicacion" onclick="multiplicar()" style="background-color: #547792;">
+			<input type="button" name="division" id="division" value="division" onclick="dividir()"
+			style="background-color: #547792;">
+		</div>
+	</form>
+
+	<h2>El resultado es:</h2>
+	<p name= "resultado" id="resultado">
+	</p>
+
+</body>
+</html>
