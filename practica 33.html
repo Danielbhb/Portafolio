@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="formulario css.css">
+	<title>Formulario de diagnóstico</title>
+    <script type="text/javascript" src="jspdf/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="jspdf/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.js"></script>
+
+    <script type="text/javascript" src="jspdf/jspdf.plugin.addimage.js"></script>
+
+    <script type="text/javascript" src="jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.plugin.from_html.js"></script>
+
+    <script type="text/javascript">
+        function generar(event) {
+            event.preventDefault();
+            var doc = new jsPDF();
+            var answer1 = parseInt(document.querySelector('input[name="option"]:checked')?.value)|| 0; 
+            var answer2 = parseInt(document.querySelector('input[name="option2"]:checked')?.value)|| 0;
+            var answer3 = parseInt(document.querySelector('input[name="option3"]:checked')?.value)|| 0;
+            var answer4 = parseInt(document.querySelector('input[name="option4"]:checked')?.value)|| 0;
+            var answer5 = parseInt(document.querySelector('input[name="option5"]:checked')?.value)|| 0;
+            var total = answer1 + answer2 + answer3 + answer4 + answer5;
+            doc.setFontSize(30); 
+            doc.setTextColor(150, 100, 0);
+            doc.text(30, 30, "Resultados del cuestionario");
+            doc.setFontSize(20);
+            doc.setTextColor(100, 150, 0);
+            doc.text(30, 50, "Lograste contestar " +total+"/5 correctas");
+            var string = doc.output("datauristring");
+            document.querySelector('iframe').src = string;
+
+            // Creación de la gráfica
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Veredicto');
+                data.addColumn('number', 'Cantidad');
+                data.addRows([
+                ['Correctas', total],
+                ['Incorrectas', 5-total],
+                ]);
+
+
+            // Set chart options
+                var options = {'title':'Resultados',
+                            'width':600,
+                            'height':400,
+                            pieHole: 0.3,
+                            slices: {
+                                0: { color: 'green' },
+                                1: { color: 'rgb(199, 28, 16)' }
+                            }};
+
+                // Instantiate and draw our chart, passing in some options.
+                var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+                chart.draw(data, options);
+        }
+    </script>
+    <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+
+        // Load the Visualization API and the corechart package.
+        google.charts.load('current', {'packages':['corechart']});
+
+        // Set a callback to run when the Google Visualization API is loaded.
+        //google.charts.setOnLoadCallback(drawChart);
+
+        // Callback that creates and populates a data table,
+        // instantiates the pie chart, passes in the data and
+        // draws it.
+
+        </script>
+</head>
+<body>
+	<h1>Toma nuestro formulario de diagnóstico acerca de Marvel</h1>
+	<form method="post" action="" enctype="text/plain" class="content">
+        <fieldset>
+            <legend id="q1">¿Cómo inició la franquicia de Marvel?</legend>
+
+            <input type="radio" name="option" value="0" id="opc1">
+            <label for="opc1">En el cine con sus películas </label><br>
+
+            <input type="radio" name="option" value="1" id="opc12">
+            <label for="opc12">Mediante comics</label><br>
+
+            <input type="radio" name="option" value="0" id="opc13">
+            <label for="opc13">En la televisión con shows animados</label><br>
+
+            <input type="radio" name="option" value="0" id="opc14">
+            <label for="opc14">Mediante libros</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q2">Las siglas "MCU" a qué se refieren?</legend>
+
+            <input type="radio" name="option2" value="0" id="opc2">
+            <label for="opc2">Marvel Celestial Unity</label><br>
+
+            <input type="radio" name="option2" value="0" id="opc22">
+            <label for="opc22">Marvel Cinemtic Universe</label><br>
+
+            <input type="radio" name="option2" value="0" id="opc23">
+            <label for="opc23">Marvel Cinetic Universe</label><br>
+
+            <input type="radio" name="option2" value="1" id="opc24">
+            <label for="opc24">Marvel Cinematic Universe</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q3">¿Cuál fue el primer superhéroe de Marvel?</legend>
+
+            <input type="radio" name="option3" value="0" id="opc3">
+            <label for="opc3">Namor</label><br>
+
+            <input type="radio" name="option3" value="1" id="opc32">
+            <label for="opc32">La antorcha humana</label><br>
+
+            <input type="radio" name="option3" value="0" id="opc33">
+            <label for="opc33">Hulk</label><br>
+
+            <input type="radio" name="option3" value="0" id="opc34">
+            <label for="opc34">Spiderman</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q4">En el universo Cinemático de Marvel, ¿Cuántas películas se han estrado y en qué fase se encuentran actualmente?</legend>
+
+            <input type="radio" name="option4" value="0" id="opc4">
+            <label for="opc4">32 películas y fase 4</label><br>
+
+            <input type="radio" name="option4" value="0" id="opc42">
+            <label for="opc42">34 películas y fase 4</label><br>
+
+            <input type="radio" name="option4" value="0" id="opc43">
+            <label for="opc43">40 películas y fase 5</label><br>
+
+            <input type="radio" name="option4" value="1" id="opc44">
+            <label for="opc44">36 películas y fase 5</label><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend id="q5">En Marvel, ¿Qué es conocido como un "ser nexus"?</legend>
+
+            <input type="radio" name="option5" value="0" id="opc5">
+            <label for="opc5">Ser capaz de absorber cualquier superpoder que le ineterese.</label><br>
+
+            <input type="radio" name="option5" value="0" id="opc52">
+            <label for="opc52">Entidades que forman parte del tribunal viviente, vigilando y cuidando del multiverso. </label><br>
+
+            <input type="radio" name="option5" value="1" id="opc53">
+            <label for="opc53">Entidad excepcional en cada universo con capacidad de alterar el flujo de la corriente temporal.</label><br>
+
+            <input type="radio" name="option5" value="0" id="opc54">
+            <label for="opc54">Ser que excede los límites de la vida y muerte, creando un nexo entre estos y por lo tanto siendo capáz de revivir constantemente.</label><br>
+
+        </fieldset>
+
+    <button type="submit" onclick="generar(event)">Enviar</button>
+</form>
+<div style="display: flex; justify-content: center; flex-shrink: 3;flex-direction: row">
+        <div id="chart_div"></div>
+        <div id="ResultadosPDF">
+            <iframe src="" frameborder="0" width="500" height="500"></iframe>
+        </div>
+    </div>
+</body>
+</html>
