@@ -1,0 +1,45 @@
+#type{
+	width: 100%;
+	margin-bottom: 20px;
+	height: 30px;
+	cursor: pointer;
+}
+
+input[type="button"]:hover {
+            background-color: #CAE8BD;
+        }
+
+h1{
+	text-align: center;
+	color: #6F826A;
+}
+
+#form{
+	margin: 90px;
+	margin-bottom: 20px;
+}
+
+#envio{
+	width: 100%;
+	margin-bottom: 20px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#envio: hover{
+	background-color: green;
+}
+
+#hrs{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#resultado{
+	text-align: center;
+	font-size: 15px;
+}
+
+body{
+	background-color: #ECFAE5;
+}

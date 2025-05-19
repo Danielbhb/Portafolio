@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exámen práctico</title>
+	<link rel="stylesheet" type="text/css" href="eparcial3.css">
+	<script>
+        function cuota() {
+            // Obtener valores cuando se hace clic en el botón
+            var horas = parseFloat(document.getElementById('hrs').value);
+            var tarifa = parseFloat(document.getElementById('type').value);
+              
+            // Calcular y mostrar resultado
+            var total = horas * tarifa;
+            document.getElementById("resultado").innerHTML = "Total a pagar: $" + total.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Pagos de estacionamiento</h1>
+
+    <form id="form">
+        <label for="hrs" style="font-size: 20px;">Ingresa tus horas de estacionamiento:</label><br>
+        <input type="number" name="hrs" id="hrs"><br>
+
+        <label for="type" style="font-size: 20px;">Ingresa el tipo de vehículo:</label><br>
+        <select name="type" id="type">
+            <option value="20.00">Auto chico ($20.00)</option>
+            <option value="30.00">Camioneta ($30.00)</option>
+            <option value="40.00">Camión ($40.00)</option>
+        </select>
+
+        <br>
+        <input type="button" name="envio" id="envio" value="Calcula total a pagar" 
+        onclick="cuota()" style="font-size: 20px;">
+    </form>
+
+    <p id="resultado">Total a pagar:</p>
+</body>
+</html>
